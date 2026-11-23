@@ -6,6 +6,7 @@ public class RandomPlacer : MonoBehaviour
     public GameObject Box10;
     public GameObject Box50;
     public GameObject Box100;
+    public Transform Boxes;
 
     public int count10 = 7;
     public int count50 = 5;
@@ -33,7 +34,7 @@ public class RandomPlacer : MonoBehaviour
             Vector3 rndPos = new Vector3(rndX, 1000, rndZ);
             if(Physics.Raycast(rndPos, Vector3.down, out RaycastHit hit))
             {
-              Instantiate(Box10, hit.point + Vector3.up*2f, Quaternion.identity);
+              Instantiate(Box10, hit.point + Vector3.up*2f, Quaternion.identity, Boxes);
                
                 Debug.Log("Box10 placed");
             }
@@ -46,7 +47,7 @@ public class RandomPlacer : MonoBehaviour
             Vector3 rndPos = new Vector3(rndX, 1000, rndZ);
             if(Physics.Raycast(rndPos, Vector3.down, out RaycastHit hit))
             {
-              Instantiate(Box50, hit.point + Vector3.up*2f, Quaternion.identity);
+              Instantiate(Box50, hit.point + Vector3.up*2f, Quaternion.identity, Boxes);
                 
                 Debug.Log("Box50 placed");
             }
@@ -59,7 +60,7 @@ public class RandomPlacer : MonoBehaviour
             Vector3 rndPos = new Vector3(rndX, 1000, rndZ);
             if(Physics.Raycast(rndPos, Vector3.down, out RaycastHit hit))
             {
-              Instantiate(Box100, hit.point + Vector3.up*2f, Quaternion.identity);
+              Instantiate(Box100, hit.point + Vector3.up*2f, Quaternion.identity, Boxes);
                 Debug.Log("Box100 placed");
             }
                 
