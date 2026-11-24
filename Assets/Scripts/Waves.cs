@@ -6,8 +6,8 @@ public class Waves : MonoBehaviour
 {
 
     public float amplitude = 1f;
-    public float frequency = .5f;
-    public float wavelenght = 1f;
+    public float frequency = .35f;
+    public float wavelenght = 30f;
     const float pi= (float) Math.PI;
 
     Mesh mesh;
@@ -21,7 +21,7 @@ public class Waves : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
     
         Vector3[] v = mesh.vertices;
