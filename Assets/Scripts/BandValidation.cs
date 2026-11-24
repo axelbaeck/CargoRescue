@@ -16,8 +16,8 @@ public class BandValidation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float SimStretch = Vector3.Distance(Vertices[0].gameObject.transform.position, Vertices[1].gameObject.transform.position) - Spring.RestLength;
+        /*float SimStretch = Vector3.Distance(Vertices[0].gameObject.transform.position, Vertices[1].gameObject.transform.position) - Spring.RestLength;
         Debug.Log("Expected distance between the first and second vertices: " + UpperLinkStretchExp);
-        Debug.Log("Simulated distance between the first and second vertices: " + SimStretch);
+        Debug.Log("Simulated distance between the first and second vertices: " + SimStretch);*/
     }
 }

@@ -4,10 +4,8 @@ using UnityEngine.InputSystem;
 
 public class DroneController : MonoBehaviour
 {
-    float AscendForce = 2f;
+    float AscendForce = 10f;
     public static Vector3 CurrentPosition;
-    
-    private bool IsTilted;
     float Damping = 4f;
 
     Rigidbody rb;
@@ -15,7 +13,6 @@ public class DroneController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        IsTilted = false;
     }
 
     // Update is called once per frame

@@ -4,9 +4,9 @@ public class SpringControl : MonoBehaviour
 {
     Rigidbody rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public float RestLength;
-    public static float K = 100f;
-    public float Damping = 5f;
+    public static float RestLength;
+    public static float K = 250f;
+    public static float Damping = 5f;
     public GameObject UpperV;
     void Start()
     {
