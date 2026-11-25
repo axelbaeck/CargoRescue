@@ -11,7 +11,7 @@ public class SpringControl : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
+        rb.linearDamping = 1;
         RestLength = 1;
     }
 
@@ -32,16 +32,7 @@ public class SpringControl : MonoBehaviour
 
         Rigidbody upperRb = UpperV.GetComponent<Rigidbody>();
 
-        Vector3 upperVelocity = upperRb != null
-            ? upperRb.linearVelocity
-            : Vector3.zero;
-
-        float RelativeSpeed = Vector3.Dot(
-            upperVelocity - rb.linearVelocity,
-            Normal
-        );
-
-        float SpringForce = Mathf.Max(0f, DeltaY * K + RelativeSpeed * Damping);
+        float SpringForce = DeltaY * K;
 
         rb.AddForce(Normal * SpringForce);
 

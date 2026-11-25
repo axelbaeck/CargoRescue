@@ -4,9 +4,9 @@ using UnityEngine.InputSystem;
 
 public class DroneController : MonoBehaviour
 {
-    float AscendForce = 10f;
+    float AscendForce = 5f;
     public static Vector3 CurrentPosition;
-    float Damping = 4f;
+    float Damping = 3f;
 
     Rigidbody rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
